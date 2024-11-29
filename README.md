@@ -20,10 +20,3 @@ This is a visually pleasing **Lo-Fi Calculator** built with HTML, CSS, and JavaS
 - **JavaScript**: Functional logic for the calculator.
 
 ---
-
-
-## 🛠️ Setup and Usage
-
-1. **Clone this repository**:
-   ```bash
-   git clone https://github.com/spikyhighviruslofi-calculator.git
