@@ -1,0 +1,116 @@
+/* Overall page styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle, #1a202b, #0d1218); /* Dark radial gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling due to shapes */
+    color: #ffffff;
+    position: relative;
+}
+
+/* Aesthetic background shapes */
+body::before,
+body::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px); /* Soft blur for aesthetic look */
+    opacity: 0.6;
+    z-index: 0;
+}
+
+body::before {
+    width: 400px;
+    height: 400px;
+    background: #64b5f6; /* Soft blue circle */
+    top: 15%;
+    left: 10%;
+}
+
+body::after {
+    width: 500px;
+    height: 500px;
+    background: #42a5f5; /* Slightly deeper blue */
+    bottom: 10%;
+    right: 15%;
+}
+
+/* Calculator container */
+.calculator {
+    position: relative; /* Bring it above background shapes */
+    z-index: 1;
+    background: #1e2a38;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 10px 10px 20px #0f141b, -10px -10px 20px #293542; /* Neumorphic shadows */
+    width: 320px;
+    text-align: center;
+}
+
+/* Display input field */
+#display {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 20px;
+    border: none;
+    background: #0d1117;
+    text-align: right;
+    font-size: 2rem;
+    padding: 15px;
+    border-radius: 15px;
+    color: #90caf9;
+    box-shadow: inset 5px 5px 10px #0a0e12, inset -5px -5px 10px #131b26;
+    outline: none;
+    z-index: 1;
+}
+
+/* Buttons container */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* Buttons styling */
+button {
+    height: 60px;
+    background: #1c2936;
+    border: none;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px #0f1a22, -5px -5px 10px #273644;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 15px #0c141a, -5px -5px 15px #2a3e50;
+}
+
+/* Active (click) effect for buttons */
+button:active {
+    transform: translateY(3px);
+    box-shadow: inset 3px 3px 5px #0a0f14, inset -3px -3px 5px #1f2a36;
+}
+
+/* Special styling for "=" button */
+button:nth-child(15) {
+    background: #0077c2;
+    color: #ffffff;
+    grid-column: span 2;
+    font-size: 1.6rem;
+}
+
+/* Special styling for "C" button */
+button:nth-child(4) {
+    background: #d32f2f;
+    color: white;
+}
